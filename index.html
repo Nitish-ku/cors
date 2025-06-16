@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.6/axios.min.js"></script>
+</head>
+<body>
+    <h1> now I have to learn :
+    </h1>
+    <ul>
+        <li>git and github</li>
+        <li>difference between axios and fetch</li>
+        <li>http deep dive</li>
+        <li>auth and connecting </li>
+        <li> jwt and auth recap </li>
+        <li>mongodb</li>
+        <li>react</li>
+        <li> custom hook</li>
+        <li>recoil</li>
+        <li>recoil deep dive</li>
+        <li>typescript</li>
+        <li>tailwind</li>
+        <li>nextjs</li>
+    </ul>
+
+    <input id="a" type="text" placeholder="first value"></input>
+    <input id="b" type="text" placeholder="second value"></input>
+
+    <button onclick="sendRequest()">findSum</button>
+
+    <script>
+            async function sendRequest(){
+            const a = document.getElementById("a").value;
+            const b = document.getElementById("b").value;
+            const response = await axios.post("http://localhost:3000/sum",{
+                a : a,
+                b : b
+            })
+            console.log(response.data);
+        }
+    </script>
+</body>
+</html>
